@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Designer & AI Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* 顶部标题区 */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .hero .desc {
+            font-size: 0.95rem;
+            color: #888;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* 通用区块标题 */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 60px 0 30px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: -20px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 关于我 - 照片网格 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .photo-card {
+            text-align: center;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #f5f5f5;
+        }
+
+        .photo-card h3 {
+            margin-top: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .photo-card p {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        /* 软件技能 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skill-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .skill-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            font-size: 0.8rem;
+            color: #888;
+            line-height: 1.4;
+        }
+
+        /* 项目作品 */
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+
+        .project-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 12px;
+            background: #f5f5f5;
+        }
+
+        .project-info {
+            flex: 1;
+            padding-top: 20px;
+        }
+
+        .project-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e0e0e0;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .project-info h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .project-result {
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .project-card,
+            .project-card:nth-child(even) {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .project-image {
+                min-width: auto;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部标题 -->
+    <section class="hero">
+        <h1>Product Designer & AI Researcher</h1>
+        <p class="subtitle">探索 AI × 用户体验 × 产品创新</p>
+        <p class="desc">关注 AI 应用、用户需求与产品体验设计</p>
+    </section>
+
+    <!-- 关于我 -->
+    <h2 class="section-title">关于我</h2>
+    <div class="about-grid">
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x500/f0f0f0/999?text=证件照" alt="证件照">
+            <h3>证件照</h3>
+            <p>专业、专注、追求卓越</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x500/f0f0f0/999?text=工作照" alt="工作照">
+            <h3>工作照</h3>
+            <p>在设计中寻找灵感与创新</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x500/f0f0f0/999?text=生活照" alt="生活照">
+            <h3>生活照</h3>
+            <p>热爱生活，享受每一刻</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x500/f0f0f0/999?text=旅行照" alt="旅行照">
+            <h3>旅行照</h3>
+            <p>探索世界，开阔视野</p>
+        </div>
+    </div>
+
+    <!-- 软件技能 -->
+    <h2 class="section-title">软件技能</h2>
+    <p class="section-subtitle">熟练使用各类专业软件，高效完成设计与分析工作</p>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h4>Figma</h4>
+            <p>UI/UX设计、原型制作、协作设计</p>
+        </div>
+        <div class="skill-card">
+            <h4>Google Stitch</h4>
+            <p>原型设计、高保真AI设计</p>
+        </div>
+        <div class="skill-card">
+            <h4>Photoshop</h4>
+            <p>图像处理、创意设计、视觉效果</p>
+        </div>
+        <div class="skill-card">
+            <h4>XMind</h4>
+            <p>思维导图、思维整理、项目规划</p>
+        </div>
+        <div class="skill-card">
+            <h4>SPSS</h4>
+            <p>统计分析、数据建模、社会科学研究</p>
+        </div>
+        <div class="skill-card">
+            <h4>SmartPLS 4</h4>
+            <p>结构方程模型、偏最小二乘法、数据分析</p>
+        </div>
+        <div class="skill-card">
+            <h4>PowerPoint</h4>
+            <p>演示文稿制作、商务展示、报告汇报</p>
+        </div>
+    </div>
+
+    <!-- 项目作品 -->
+    <h2 class="section-title">项目作品</h2>
+    <div class="projects-container">
+        
+        <!-- 项目 01 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/f0f0f0/999?text=无人驾驶旅游车" alt="项目1">
+            </div>
+            <div class="project-info">
+                <div class="project-number">01</div>
+                <h3>基于河源乡村振兴的无人驾驶旅游车体验设计研究</h3>
+                <p class="project-meta">项目第二负责人 | 2025.03 - 至今</p>
+                <p class="project-desc">针对河源乡村振兴战略下乡村旅游接驳痛点，探索无人驾驶在特定场景的商业化落地可能。</p>
+                <p class="project-result">最终成果：整合输出3万字+体验设计研究报告，并成功申请并获得省级大学生科研基金重点项目10万元。</p>
+            </div>
+        </div>
+
+        <!-- 项目 02 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://via.placeholder.com/600x400/f0f0f0/999?text=CoachAI" alt="项目2">
+            </div>
+            <div class="project-info">
+                <div class="project-number">02</div>
+                <h3>CoachAI - AI运动教练应用</h3>
+                <p class="project-meta">产品设计师 | 2024</p>
+                <p class="project-desc">不止记录数据，更守护你的运动习惯。每个建议，都有科学答案。</p>
+                <p class="project-result">AI不仅告诉你"怎么做"，更解释"为什么"——从心率区间到代谢原理，帮你建立真正的运动认知。</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
